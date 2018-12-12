@@ -1,0 +1,25 @@
+﻿@using TPCWare.XmasDev.Models
+
+<table class="tabl pb-4">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Url</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var xmasCard in XmasCardList)
+        {
+            <tr>
+                <td>@xmasCard.Title</td>
+                <td><a href="@xmasCard.Url">@xmasCard.Url</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@functions {
+
+[Parameter]
+XmasCard[] XmasCardList { get; set; }
+}
